@@ -1,13 +1,13 @@
 import streamlit as st
-# import numpy as np
-# import pandas as pd
-# from PIL import Image
+import numpy as np
+import pandas as pd
+from PIL import Image
 import time
 
 st.title('streamlit超入門')
 
 st.write('プログレスバーの表示')
-'Stat!!'
+'Start!!'
 
 latest_iteration = st.empty()
 bar = st.progress(0)
@@ -40,18 +40,18 @@ option = st.selectbox(
     list(range(1, 11))
 )
 'あなたの好きな数字は、', option, 'です。'
-
-if st.checkbox('Show Image'):
-    img = Image.open('IMG_4863.jpg')
-    st.image(img, caption='Okamura', use_column_width=True)
-
-df = pd.DataFrame(
-    np.random.rand(100, 2)/[50, 50] + [35.69, 139.70],
-    columns=['lat', 'lon'],
-)
-st.map(df)
-st.bar_chart(df)
-st.dataframe(df.style.highlight_max(axis=0))
+#
+# if st.checkbox('Show Image'):
+#     img = Image.open('IMG_4863.jpg')
+#     st.image(img, caption='Okamura', use_column_width=True)
+#
+# df = pd.DataFrame(
+#     np.random.rand(100, 2)/[50, 50] + [35.69, 139.70],
+#     columns=['lat', 'lon'],
+# )
+# st.map(df)
+# st.bar_chart(df)
+# st.dataframe(df.style.highlight_max(axis=0))
 
 # """
 # # 章
